@@ -1,0 +1,83 @@
+
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<title>Ruch harmoniczny</title>
+    <link rel = "stylesheet" href = "style.css" type = "text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
+    
+    <script src ="javascript.js"></script>
+    
+    
+	
+	
+</head>
+
+<body>
+    <div id = "container">
+        <div id = logo>
+            <h1>Ruch harmoniczny</h1>
+        </div>
+        <div id = pilot>
+        
+            <div class="slidercontainer">
+                <input type="range" id = "suwokres" class = "slider" min="0.5" max ="10" step = "0.5" value = "2"> <br/>
+                <p>OKRES: <span id = "wartokres"></span> s </p>
+            </div>
+            
+            <div class="slidercontainer">
+                <input type="range" id = "suwamplituda" class = "slider" min="20" max ="130" step = "1" value = "85"> <br/>
+                <p>AMPLITUDA: <span id = "wartamplituda"></span> px </p>
+            </div>
+            
+            <div class="slidercontainer">
+                <input type="range" id = "suwfaza" class = "slider" min="0" max ="2" step = "0.1" value = "0"><br/>
+                <p>FAZA POCZĄTKOWA: <span id = "wartfaza"></span> &pi;  </p>
+            </div>
+            <div id ="wprowadz">
+                <input type ="button" value="Wprowadź" class = "przycisk" onclick="init(),polozenie(), predkosc(), przyspieszenie(), this.disabled = true;" >
+                <input type ="button" value="Reset" class = "przycisk" onclick="location.reload();" >
+            </div>
+            <div style = "clear:both"></div>
+
+            
+            <script src ="javascript.js"></script>
+        
+        </div>
+        <div id = animacje>
+            <div id = "sprezyna">
+                 <canvas id="myCanvas" height="400" width="300">
+                </canvas>
+            </div>
+            <div id = "wykresy" width = "680" height = "480">
+                <div class = "wykres">
+                     <canvas id = "wykresx" width = "670" height="160"></canvas>
+                </div>
+                <div class = "wykres">
+                    <canvas id = "wykresv" width = "670" height="160"></canvas>
+
+                </div>
+                <div class = "wykres">
+                    <canvas id = "wykresa" width = "670" height="160"></canvas>
+                    
+                </div>
+                 
+            </div>
+           
+        </div>
+        
+        
+    </div>
+  
+
+
+
+    
+    
+    
+    
+</body>
+</html>
